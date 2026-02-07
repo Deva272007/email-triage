@@ -1,0 +1,5 @@
+email_id,category,priority,routed_to
+1,Support,High,Support Team
+2,Sales,Medium,Sales Team
+3,HR,Low,HR Team
+4,Spam,Low,Spam Folder
