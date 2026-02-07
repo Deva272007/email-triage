@@ -1,0 +1,31 @@
+# Project Documentation
+## Email Triage Assistant
+
+## 1. Introduction
+Email Triage Assistant is an automated system designed to manage incoming emails by categorizing them, assigning priorities, and routing them efficiently.
+
+## 2. Problem Statement
+Manual email handling is time-consuming and error-prone. There is a need for an automated solution to organize emails and improve response efficiency.
+
+## 3. Objectives
+- Automatically classify emails
+- Assign priority levels
+- Route emails to correct teams or folders
+- Reduce manual effort
+
+## 4. System Modules
+- Email Input Module
+- Classification Module
+- Priority Assignment Module
+- Routing Module
+- Output Generation Module
+
+## 5. Methodology
+Emails are read from a CSV file, processed using rule-based logic, classified into categories, assigned priority levels, and saved as output.
+
+## 6. Technologies Used
+- Python / Java
+- CSV file handling
+
+## 7. Conclusion
+The Email Triage Assistant provides a simple and effective way to automate email organization and prioritization.
