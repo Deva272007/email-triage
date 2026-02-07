@@ -1,24 +1,62 @@
 
-# Email Triage Assistant
+Email Triage Assistant 📧 🤖
+The Email Triage Assistant is an intelligent automation agent designed to solve "Inbox Fatigue." By integrating the Gmail API with GPT-4o, it transforms a cluttered inbox into a prioritized, actionable dashboard.
 
-The Email Triage Assistant is an automated system that classifies incoming emails, assigns priority levels, and routes them to appropriate categories or teams. It helps reduce manual effort and improves email handling efficiency.
+🌟 The Unique Edge: "EQ Triage"
+Unlike standard filters that look for keywords like "Urgent," this agent uses LLM-based Sentiment Analysis to understand the "Vibe" of the sender. It identifies if a sender is Frustrated, Formal, or Excited and builds a Relationship Heat-Map to prioritize emails based on emotional stakes and professional urgency.
 
-## Features
-- Email classification
-- Priority assignment
-- Email routing
-- CSV-based input and output
+🚀 Key Features
+ScaleDown Summarization: Compresses massive threads (50+ messages) into 1-sentence actionable summaries, achieving ~85% text reduction.
 
-## Tech Stack
-- Python / Java
-- CSV files for data handling
+Priority Scoring: A weighted 1-10 ranking based on sender intent, sentiment, and urgency.
 
-## How It Works
-1. Read emails from a CSV file
-2. Classify emails based on content
-3. Assign priority (High / Medium / Low)
-4. Route emails to appropriate category
-5. Store results in an output file
+Meeting Extraction: Automatically identifies dates and times for potential scheduling.
 
-## Output
-Categorized emails with priority and routing information.
+Tone-Matched Drafting: Generates professional response templates that mirror the sender’s "vibe" (e.g., empathetic replies for frustrated senders).
+
+🛠️ Technical Stack
+Language: Python 3.9+
+
+APIs: Gmail API (Google Workspace), OpenAI GPT-4o
+
+Authentication: OAuth 2.0
+
+Environment: python-dotenv, google-api-python-client
+
+⚙️ Installation & Setup
+Clone the Repository
+
+git clone https://github.com/Deva272007/email-triage.git
+cd email-triage-assistant
+
+Configuration
+
+Place your credentials.json (from Google Cloud Console) in the root directory.
+
+Create a .env file and add your OpenAI key:
+
+OPENAI_API_KEY=your_actual_key_here
+Install Dependencies
+
+pip install -r requirements.txt
+Run the Assistant
+
+python triage.py
+
+🧠 System Architecture
+Ingestion: Connects to the Gmail API to retrieve unread message payloads.
+
+Processing (ScaleDown): Strips redundant metadata and repetitive signatures to maximize LLM efficiency.
+
+Analysis: Performs sentiment detection and priority scoring in a single, high-speed AI pass.
+
+Output: Generates a structured Triage Report including a "Vibe" check and suggested draft.
+
+🛡️ Security & Privacy
+OAuth 2.0: Secure handshake with Google; tokens are stored locally in token.json.
+
+Minimal Scoping: Uses gmail.readonly to ensure the assistant cannot delete or modify your emails.
+
+Local Secrets: API keys and credentials are excluded from version control via .gitignore.
+
+
